@@ -1,0 +1,37 @@
+
+class Polygon {
+	constructor(nOfSides, sides) {
+		this.nOfSides = nOfSides;
+		this.sides = sides;
+	}
+}
+
+class Triangle : Polygon {
+	constructor(sides) {
+		super(3, sides);
+	}
+
+	area() {
+		val a = this.sides[0], b = this.sides[1], c = this.sides[2];
+		val s = (a + b + c) / 2;
+		ret sqrt(s * (s - a) * (s - b) * (s - c));
+	}
+
+	perimeter() {
+		ret (this.sides[0] + this.sides[1] + this.sides[2]);
+	}
+}
+
+class Rectangle : Polygon {
+	constructor(sides) {
+		super(4, sides);
+	}
+
+	area() {
+		ret (this.sides[0] * this.sides[1]);
+	}
+
+	perimeter() {
+		ret (2 * this.sides[0] + 2 * this.sides[1]);
+	}
+}

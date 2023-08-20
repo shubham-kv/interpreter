@@ -1,0 +1,19 @@
+
+DONE:
+	1. Implicit variable initialization.
+	2. Support for comma seperated list of variable declarations
+	3. have only one symbol table for loop, repeat constructs and it's child block stmt
+	4. support for val declarations.
+	5. support functions
+	6. support lists
+	7. Fix the problem of list elements not allowed to be used as an lvalue
+	8. you're accessing memory which has been freed while deleting Parser, fix that.
+	9. define funs in runtime stack
+	10. wanted to support super calls and accesses
+	11. string escaping
+	12. import support
+
+TODO:
+	1. need to implement error propagation while parsing
+		have parse methods take in parameters specifying whether they should flag error or return silently
+	2. string interpolation

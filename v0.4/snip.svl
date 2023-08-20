@@ -1,0 +1,42 @@
+import Polygon;
+
+var i = 10;
+val NAME = 'SVL';
+
+fun fib(n) {
+	var a = 0, b = 1, c = 0;
+
+	when(n) {
+		1 -> ret a;
+		2 -> ret b;
+		else -> {
+			repeat(n - 2) {
+				c = a + b;
+				a = b;
+				b = c;
+			}
+			ret c;
+		}
+	}
+}
+
+loop(1 => 10) { i ->
+	outln(fib(i));
+}
+
+/*
+repeat(10) {
+	outln('repeat');
+}
+*/
+
+val triangle = Triangle([ 3, 3, 3 ]);
+
+outln('Area of triangle: ' + triangle.area());
+outln('Perimiter of triangle: ' + triangle.perimeter());
+
+
+val rectangle = Rectangle([ 2, 3, 2, 3 ]);
+
+outln('Area of rectangle: ' + rectangle.area());
+outln('Perimiter of rectangle: ' + rectangle.perimeter());

@@ -1,0 +1,11 @@
+
+val foo = 'FooBar';
+
+repeat(strLen(foo)) {
+	outln(charAt(foo, it));
+}
+
+outln(toUpper(foo));
+outln(toLower(foo));
+
+

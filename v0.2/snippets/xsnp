@@ -1,0 +1,93 @@
+/*
+val SOME_CONST = "Anonymous";
+var a = 10, b;
+
+print SOME_CONST;
+
+if(5 + 5 == a) {
+	print "a is 10";
+} else {
+	print "a is not 10.";
+}
+
+repeat(a) {
+	print "Programming is fun!";
+}
+
+loop(-a -> a; 2) {
+	print it;
+}
+
+b = 1;
+a = 0;
+
+loop(a < 10) {
+	print b;
+	b = b * 156909;
+	a = a + 1;
+}
+
+b = 18;
+
+when(b % 2) {
+	0 -> print "b is even";
+	1 -> print "b is odd";
+	else -> print "impossible";
+}
+*/
+
+
+val mylong = 18919919L;
+val myint = 1781;
+val mychar = "a";
+val mystr = "hello";
+
+fun adder(a, b) {
+	...
+}
+
+class Foo {
+
+}
+
+a = Foo()
+
+val b = 89L;
+print type(b);	// <long val>
+
+print type(mylong);		// <long var>
+print type(myint);		// <int var>
+print type(mychar);		// <char var>
+print type(mystr);		// <string var>
+print type(adder);		// <fun 'adder'>
+print type(a);			// Object of <class 'Foo'>
+print type(b);			// null object
+
+// null isn't a type, it denotes impresence of value
+// is_instance(a, int)
+
+
+
+fun is_prime(n) {
+	if(n < 2)
+		ret false;
+
+	if(n == 2 || n == 3)
+		ret true;
+
+	val max = n / 2;
+
+	loop(2 => max)
+		if(n % it == 0)
+			ret false;
+
+	ret true;
+}
+
+
+loop(0 => 1024) {
+	if(is_prime(it)) {
+		print it;
+	}
+}
+

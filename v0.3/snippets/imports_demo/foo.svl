@@ -1,0 +1,12 @@
+
+class Foo {
+	fooMethod() {
+		outln('Foo::fooMethod()');
+	}
+}
+
+fun fooFun() {
+	outln('fooFun()');
+	ret 'fooFun';
+}
+

@@ -1,0 +1,91 @@
+
+/*
+data Point(x, y);
+
+
+class Line {
+	class Point {
+		constr(x, y) {
+			it.x = x;
+			it.y = y;
+		}
+	}
+
+	var startPoint;
+	var endPoint;
+
+	constr(x1, y1, x2, y2) {
+		it.startPoint = ;
+	}
+
+	fun setStartPoint(x, y) {
+		it.startPoint = Point(x, y);
+		ret it;
+	}
+	fun setEndPoint(x, y) {
+		it.endPoint = Point(x, y);
+		ret it;
+	}
+}
+*/
+
+class Foo {
+	constructor(a, b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	fun apple() {
+		outln('apple of Foo');
+	}
+
+	fun foobar() {
+		outln('method foobar of class Foo');
+	}
+}
+
+class Bar : Foo {
+	constructor(a, b, c) {
+		super(a, b);
+		this.c = c;
+	}
+
+	fun apple() {
+		outln('apple of Bar');
+	}
+
+	fun foobar() {
+		super.apple();
+	}
+}
+
+class Sugar : Bar { }
+
+Sugar().foobar();	// prints 'apple of Foo'
+
+
+class Point {
+	var x, y;
+
+	fun setX(x) {
+		it.x = x;
+		ret it;
+	}
+
+	fun setY(y) {
+		it.y = y;
+		ret it;
+	}
+}
+
+var points = [Point(0, 0), Point(0, 3), Point(3, 3), Point(3, 0)];
+
+repeat(4) {
+	points[it].setX(points[it].x + 10);
+	points[it].setY(points[it].y + 10);
+}
+
+repeat(4) {
+	outln('(' + points[it].x + ', ' + points[it].y + ')');
+}
+

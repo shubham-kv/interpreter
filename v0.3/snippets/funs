@@ -1,0 +1,108 @@
+
+fun factorial(n) {
+	if(n <= 1)
+		ret 1;
+	else
+		ret n * factorial(n - 1);
+}
+
+print "";
+print "|===============>";
+print "| FACTORIAl";
+print "|===============>";
+
+print factorial(4);
+print factorial(5);
+
+
+fun fibonacci(n) {
+	var a = 0, b = 1, res = 0;
+
+	if(n == 0) {
+		ret a;
+	}
+	else if(n == 1) {
+		ret b;
+	}
+	else {
+		loop(0 => n - 2) {
+			res = a + b;
+			a = b;
+			b = res;
+		}
+		ret res;
+	}
+}
+
+print "";
+print "|===============>";
+print "| FIBONACCi";
+print "|===============>";
+
+
+
+loop(num: 0 => 10) {
+	print fibonacci(number);
+}
+
+
+
+
+fun is_prime(n) {
+	if(n < 2) {
+		ret 0;
+	}
+	else if(n == 2 || n == 3) {
+		ret 1;
+	}
+
+	loop(2 => n / 2) {
+		if(n % it == 0) {
+			ret 0;
+		}
+	}
+
+	ret 1;
+}
+
+print "";
+print "|===============>";
+print "| PRIMe";
+print "|===============>";
+
+loop(0 => 255) {
+	if(is_prime(it))
+		print it;
+}
+
+
+
+'fun' IDENTIFIER '(' params ')' ':' RET_TYPE
+
+fun foo(): void {
+	...
+}
+
+fun apple(): Int? {
+
+}
+
+fun banana(): Float? {
+	
+}
+
+fun banana(): String? {
+	
+}
+
+val bar = foo();
+
+
+val car: String = null;
+
+
+
+
+
+
+

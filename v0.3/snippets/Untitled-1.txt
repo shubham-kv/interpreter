@@ -1,0 +1,52 @@
+
+class Integer {
+	var value;
+
+	fun setValue(newValue) {
+		it.value = newValue;
+		ret it;
+	}
+
+	fun getValue() {
+		ret it.value;
+	}
+
+	fun getStringRepr() {
+		ret 'Integer { at: $it, value: $(it.value) }';
+	}
+}
+
+class Double {
+	var value;
+
+	fun setValue(newValue) {
+		it.value = newValue;
+		ret it;
+	}
+
+	fun getValue() {
+		ret it.value;
+	}
+
+	fun getStringRepr() {
+		ret 'Double { at: $it, value: $(it.value) }';
+	}
+}
+
+class String {
+	var value;
+
+	fun setValue(newValue) {
+		it.value = newValue;
+	}
+
+	fun getValue() {
+		ret it.value;
+	}
+
+	fun getStringRepr() {
+		ret 'String { at: $it, value: $(it.value) }';
+	}
+}
+
+

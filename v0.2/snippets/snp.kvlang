@@ -1,0 +1,7 @@
+
+// immutable variable declaration with 'val'
+val PI = 3.14159;
+
+// mutable variable declaration with 'var'
+var radius = in_double("Enter radius: ");
+outln("Area of circle with radius " + radius + ": " + (PI * radius * radius));

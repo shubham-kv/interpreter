@@ -1,0 +1,16 @@
+
+class Foo {
+	var name;
+
+	fun printName() {
+		outln(it.name);
+	}
+}
+
+var fruits = [ Foo('Apple'), Foo('Banana') ];
+
+repeat(2) {
+	var callback = fruits[it].printName;
+	callback();
+}
+

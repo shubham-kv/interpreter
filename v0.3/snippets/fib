@@ -1,0 +1,14 @@
+
+var n = 50;
+var a = 0, b = 1, c;
+
+print a;
+print b;
+
+repeat(n - 2) {
+	c = a + b;
+	a = b;
+	b = c;
+	print c;
+}
+

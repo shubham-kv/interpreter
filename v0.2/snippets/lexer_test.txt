@@ -1,0 +1,105 @@
+// single line comment
+
+/* The quick brown fox jumps over the lazy dog. */
+
+
+// ========================================>
+// NUMBER test
+	// valid int/doubel literals
+		1 89 456 35895 321456
+		
+		3.1415926535
+		90.566
+	
+	// invalid int/doubel literals
+		4our	5ive
+		3.14oneFiveNine
+
+		3space4
+		
+// ========================================>
+
+
+
+/*
+// ========================================>
+// SPECIAL SYMBOLS test
+    // valid symbols
+	( 	)
+	{ 	}
+	[ 	]
+
+	+  -  *  /  %
+
+	=  !  .  ,  :  ;
+
+	++ --
+
+	==  !=  <  <=  >  >=
+
+	&&  ||
+
+
+    // invalid symbols
+    #  &  |
+	@  ^  ~  `
+
+// ========================================>
+*/
+
+
+
+
+/*
+// ========================================>
+// String test
+	// valid string literals
+		"hello world"
+
+		"apples" "oranges"
+
+		"foo" "bar"
+
+		""
+
+	// invalid string literals
+		"error
+		"
+
+// ========================================>
+*/
+
+
+
+
+
+
+// ========================================>
+// WORDS test
+	// KEYWORDS test
+		true false var
+		if else
+		loop
+		class super this
+		fun ret
+
+		print   pint
+
+		println 
+		
+
+
+	// valid identifiers
+        name age number
+		i	j	k
+        _private
+        _public
+		say_hello()
+
+	// invalid identifiers
+		three#es
+		four$ollars
+		
+// ========================================>
+
+

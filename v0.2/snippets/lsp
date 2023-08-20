@@ -1,0 +1,58 @@
+
+
+class Point {
+	var x;
+	var y;
+
+	constructor(x) {
+		this.x = x;
+		this.y = x;
+	}
+
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	distanceFrom(pointA) {
+		val yDiff = pointA.y - this.y;
+		val xDiff = pointA.x - this.x;
+
+		ret sqrt(pow(yDiff, 2) / pow(xDiff, 2));
+	}
+
+	distanceFrom(x, y) {
+		val yDiff = pointA.y - y;
+		val xDiff = pointA.x - x;
+
+		ret Math.sqrt(Math.pow(yDiff, 2) / Math.pow(xDiff, 2));
+	}
+}
+
+var point = Point(2, 5);
+point = Point(10, 7);
+
+// get expr
+point.x = 19;
+point.y = -6;
+
+
+var foo = [
+	[ 1, 2, 3 ],
+	[ 4, 5, 6 ],
+	[ 7, 8, 9 ]
+];
+
+
+// identifier expr
+foo = [ ];
+
+// list subscript expr
+foo[0] = [ 2, 4, 6 ];
+
+loop(0 -> 3) { i ->
+	loop(0 -> 3) { j ->
+		outln('foo[' + i + '][' + j + ']: ' + foo[i][j]);
+	}
+}
+

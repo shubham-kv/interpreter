@@ -1,0 +1,14 @@
+
+
+val shubham = {
+	name: 'Shubham',
+	age: 20,
+	profession: 'Developer',
+	code: () {
+		outln('$0 is developing', name);
+	}
+};
+
+outln('$0 is $1 and he is a $2.', person.name, person.age, person.profession);
+
+

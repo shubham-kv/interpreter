@@ -1,0 +1,56 @@
+
+fun fib(n) {
+	var a = 0, b = 1, c = 10;
+
+	when(n) {
+		a -> ret a;
+		b -> ret b;
+		else -> {
+			repeat(n - 2) {
+				c = a + b;
+				a = b;
+				b = c;
+			}
+			ret c;
+		}
+	}
+
+	// if(n == 0) {
+	// 	ret a;
+	// }
+	// else if(n == 1) {
+	// 	ret b;
+	// }
+	// else {
+	// 	repeat(n - 2) {
+	// 		c = a + b;
+	// 		a = b;
+	// 		b = c;
+	// 	}
+	// 	ret c;
+	// }
+}
+
+
+
+class Math {
+	var a, b;
+
+	constr(a, b) {
+		instance.a = a;
+		instance.b = b;
+	}
+
+	fun add(a, b) -> a + b;
+
+	fun sub(a, b) -> a - b;
+
+	fun prod(a, b) -> a * b;
+
+	fun div(a, b) -> a / b;
+}
+
+
+
+
+

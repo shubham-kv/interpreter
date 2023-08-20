@@ -1,0 +1,9 @@
+
+var n = 5, factorial = 1;
+
+loop(n -> 1) {
+	factorial = it * factorial;
+}
+
+print factorial;
+

@@ -1,0 +1,42 @@
+
+data Person(var name, var age, var profession);
+data Person { val name, var age, val profession };
+
+data Person {
+	var name;
+	var age;
+	var profession;
+};
+
+val p1 = Person('Somebody', 20, 'Pencil Artist');
+val p2 = Person('Someone', 20, 'Martial Artist');
+val p3 = Person('Another one', 20, 'Writer');
+
+
+
+
+class Person {
+	constructor(name, age, profession) {
+		it.name = name;
+		it.age = age;
+		it.profession = profession;
+	}
+}
+
+val person = {
+	name: 'Shubham',
+	age: 20,
+	profession: 'Developer',
+	code: () {
+		outln('$0 is developing', name);
+	}
+};
+
+val message = format('$0 is $1 and he is a $2.', person.name, person.age, person.profession);
+'${person.name} is ${person.age} and he is a ${person.profession}.'
+
+'#{person.name} is #{person.age} and he is a #{person.profession}.'
+
+'@{person.name} is @{person.age} and he is a @{person.profession}.'
+
+

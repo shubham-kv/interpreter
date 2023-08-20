@@ -1,0 +1,18 @@
+
+class Foo {
+	constructor(name) {
+		this.name = name;
+	}
+
+	printName() {
+		outln(this.name);
+	}
+}
+
+var fruits = [ Foo('Apple'), Foo('Banana') ];
+
+repeat(2) {
+	var callback = fruits[it].printName;
+	callback();
+}
+

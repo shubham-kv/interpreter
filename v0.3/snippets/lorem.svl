@@ -1,0 +1,147 @@
+
+/*
+data Point(x, y);
+
+class Line {
+	class Point {
+		constructor(x, y) {
+			it.x = x;
+			it.y = y;
+		}
+	}
+
+	constructor(x1, y1, x2, y2) {
+		it.startPoint = Point(x1, y2);
+		it.endPoint = Point(x2, y2);
+	}
+
+	fun setStartPoint(x, y) {
+		it.startPoint = Point(x, y);
+		ret it;
+	}
+
+	fun setEndPoint(x, y) {
+		it.endPoint = Point(x, y);
+		ret it;
+	}
+}
+
+
+class Math {
+	static power(base, radix) {
+		var result;
+
+		if(radix == 0) {
+			ret 1;
+		} else if(radix == 1) {
+			ret base;
+		}
+		else if(radix > 1) {
+
+			result = 1;
+			repeat(radix - 1) {
+				result *= base;
+			}
+		}
+	}
+}
+// */
+
+
+
+class Foo {
+	method() {
+		outln("Foo::method()");
+	}
+}
+
+class Bar : Foo {
+	method() {
+		outln('Bar::method()');
+	}
+
+	test() {
+		super.method();
+	}
+}
+
+class Baz : Bar { }
+
+
+var baz = Baz();
+baz.test();
+
+
+
+class Fruit {
+	constructor(name) {
+		this.name = name;
+	}
+
+	print() {
+		outln('[Fruit::print()]: name: ' + this.name);
+	}
+}
+
+class Apple : Fruit {
+	constructor(colour) {
+		super('Apple');
+		this.colour = colour;
+	}
+
+	print() {
+		super.print();
+		outln('[Apple::print()]: colour: ' + this.colour);
+	}
+}
+
+var fruit = Apple('Green');
+fruit.print();
+
+
+
+class Point {
+	constructor(a, b) {
+		this.x = a;
+		this.y = b;
+	}
+}
+
+var points = [Point(0, 0), Point(0, 3), Point(3, 3), Point(3, 0)];
+
+repeat(4) { i ->
+	points[i].x += 100;
+	points[i].y += 100;
+}
+
+repeat(4) { i ->
+	outln('(' + points[i].x + ', ' + points[i].y + ')');
+}
+// */
+
+// /*
+fun myPow(base, radix) {
+	var absradix = radix;
+	
+	if(radix < 0)
+		absradix = -1 * radix;
+	
+	var result = 1.0;
+
+	repeat(absradix) {
+		result *= base;
+	}
+
+	if(radix < 0) {
+		result = 1.0 / result;
+	}
+
+	ret result;
+}
+
+loop(0 -> 100) { radix ->
+	outln(" 2 ^ " + radix + " : " + myPow(2, radix));
+}
+
+// */
+

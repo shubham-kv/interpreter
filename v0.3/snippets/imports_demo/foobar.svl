@@ -1,0 +1,20 @@
+
+import foo;
+import bar;
+
+class FooBar {
+	fooBarMethod() {
+		outln('FooBar::fooBarMethod()');
+	}
+}
+
+val foo = Foo();
+val bar = Bar();
+val foobar = FooBar();
+
+foo.fooMethod();
+bar.barMethod();
+foobar.fooBarMethod();
+
+outln(fooFun());
+outln(barFun());

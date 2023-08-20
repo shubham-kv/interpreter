@@ -1,0 +1,8 @@
+
+# ChangeLog
+
+## v0.4 (20/04/2022)
+
+### Added
+- Binary operator support namely BINARY_AND, BINARY_OR, BINARY_XOR, BINARY_NOT
+- asChar, asInt, asDouble

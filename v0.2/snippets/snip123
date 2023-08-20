@@ -1,0 +1,468 @@
+
+
+
+/* fun getFactorialFun() {
+	var values;
+
+	fun factorial(n) {
+
+		if(values.contains(n)) {
+			ret values.get(n);
+		}
+		else {
+			var result;
+
+			if(n < 2)
+				result = 1;
+			else
+				result = n * factorial(n - 1);
+
+			values.put(n, result);
+		}
+
+		return result;
+	}
+
+	ret factorial;
+}
+*/
+
+
+
+class Foo {
+	var name;
+
+	fun printName() {
+		outln(it.name);
+	}
+}
+
+var apple = Foo('Apple');
+apple.printName();
+
+// var appleCallback = apple.printName();
+// appleCallback();
+
+// var banana = Foo('Banana');
+// var bananaCallback = banana.printName;
+// bananaCallback();
+
+
+
+
+
+
+
+
+
+
+
+
+// class Point {
+// 	var x, y;
+
+// 	fun setX(x) {
+// 		it.x = x;
+// 		ret it;
+// 	}
+
+// 	fun setY(y) {
+// 		it.y = y;
+// 		ret it;
+// 	}
+// }
+
+// var point = Point(2, 2);
+
+// point.setX = 0;
+// point.setX(100);
+
+// point.x = 10;
+// point.y = 10;
+
+// outln('Point(' + point.x + ', ' + point.y + ')');
+
+
+
+
+
+
+
+
+
+
+/*
+fun factorial(n) {
+	if(n < 2)
+		ret 1;
+	else
+		ret n * factorial(n - 1);
+}
+
+loop(1 => 4) {
+	outln('factorial(' + it + '): ' + factorial(it));
+}
+*/
+
+
+
+
+/*
+fun foo() {
+	var count = 10;
+
+	fun increment() {
+		count += 1;
+	}
+
+	ret increment;
+}
+
+val incrementer = foo();
+incrementer();
+*/
+
+
+
+/*
+// Logical operator's shortcuit snip
+class Point {
+	var x;
+	var y;
+}
+
+var points = [ Point(0, 0), Point(0, 2), Point(2, 2), Point(2, 0) ];
+
+false || (points[0].x = -1);
+true  || (points[1].x = -1);
+false && (points[2].x = -1);
+true && (points[3].x = -1);
+
+points[0].y = -1;
+
+repeat(4) {
+	outln(points[it].x + ', ' + points[it].y);
+}
+*/
+
+
+
+
+
+
+
+
+/*
+fun foo() {
+	outln("foo() called");
+}
+fun bar() {
+	ret foo;
+}
+
+val callback = bar();
+callback();
+*/
+
+
+/*
+class Point {
+	var x;
+	var y;
+}
+
+fun foo() {
+	ret Point(10, 10);
+}
+
+foo.x;
+*/
+
+/*
+class Line {
+	// var startPoint;
+	// var endPoint;
+
+	var points;
+}
+
+
+var line = Line([ Point(0, 0), Point(5, 5) ]);
+
+line.points[0].x = 1;
+line.points[0].y = 1;
+
+line.points[1].x = 6;
+line.points[1].y = 6;
+
+
+// val p1 = Point(0, 0);
+// val p2 = Point(5, 5);
+// val points = [ Point(2, 3), Point(4, 6) ];
+// points[0].x = 10;
+
+
+repeat(2) {
+	outln(points[it].x + ', ' + points[it].y);
+}
+*/
+
+
+
+
+
+// val line = Line(p1, p2);
+
+// outln(
+// 	'A line from ' +
+// 	'(' + line.startPoint.x + ', ' + line.startPoint.y + ')' +
+// 	' to ' +
+// 	'(' + line.endPoint.x + ', ' + line.endPoint.y + ')' +
+// 	'.'
+// );
+
+
+/*
+
+fun foo(){
+	ret [
+		[ 1, 2, 3 ],
+		[ 4, 5, 6 ],
+		[ 7, 8, 9 ]
+	];
+}
+
+
+loop(0 -> 3) { i ->
+	loop(0 -> 3) { j ->
+		outln(foo()[i][j]);
+	}
+}
+
+
+
+
+
+
+/*
+fun getList(a, b) {
+	if(a == b) {
+		ret [ 2, 4 ];
+	}
+	ret null;
+}
+var num = getList(12, 19)[0];
+
+
+RuntimeError: call to 'getList' did not return a list;
+var num = getList()[0];
+			^^^^^^^^^
+
+RuntimeError: variable 'bars' is not a list;
+outln(bars[0]);
+		^^^^
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+class Polygon {
+	var nOfSides;
+	var sides;
+
+	fun calculateArea() {
+		if(nOfSides < 3) {
+			ret;
+		}
+
+		if(nOfSides == 3) {
+			// calculate area for triangle
+		}
+
+		if(nOfSides == 4) {
+			// calculate area for rectangle
+		}
+	}
+}
+
+var side1 = Line(Point(0, 0), Point(0, 5));
+var side2 = Line(Point(0, 0), Point(5, 0));
+var side3 = Line(Point(0, 5), Point(5, 0));
+
+var triangle = Polygon(3, [ side1, side2, side3 ]);
+
+repeat(triangle.nOfSides) {
+	var side = triangle.sides[it];
+	
+	outln(side.startPoint.x);
+	outln(side.startPoint.y);
+
+	outln(side.endPoint.x);
+	outln(side.endPoint.y);
+}
+*/
+
+
+
+/*
+val points = [
+	Point(2, 3),
+	Point(4, 5),
+	Point(5, 5)
+];
+
+loop(0 -> 3) {
+	outln('Point(' + points[it].x + ', ' + points[it].y + ')');
+}
+
+// points[it].x = 189;
+
+// val center = Point(0, 0);
+// val pointA = Point(10, 10);
+
+// pointA.distanceFrom(center);
+*/
+
+
+
+
+
+
+
+/*
+var funs;
+
+fun foo(name) {
+	outln('Hello ' + name);
+}
+
+fun bar() {
+	outln('Adios amigos');
+}
+
+funs = [ foo, bar ];
+
+funs[0]('Prince');
+funs[1]();
+
+*/
+
+
+
+
+class Foo {
+	override fun add(a, b) {
+		...
+	}
+}
+
+
+val foo = fun (a, b) {
+	...
+}
+
+val bar = a -> {
+	return a * (a - 24) * (a + 24);
+};
+
+
+val foo = (a, b) -> {
+	...
+}
+
+val bar = (a) {
+	return a * (a - 24) * (a + 24);
+};
+
+fun bar() {
+
+}
+
+loop(0 => 19) { i ->
+	loop(0 => 4) { j ->
+		outln(i + " " + j);
+	}
+}
+
+
+
+var foo = {
+	width: 19,
+	height: 89,
+	calcArea: () { it ->
+		ret (it.width * it.height);
+	}
+};
+
+foo.width = 10;
+foo.height = 90;
+
+val bar = foo.calcArea();
+
+
+interface OnClickListener {
+	fun onClick(object);
+};
+
+class View : OnClickListener {
+	var name;
+
+	override fun onClick(obj) {
+		outln("obj clicked!");
+	}
+}
+
+
+val callable = fun (a, b) {
+	ret outln();
+}
+
+
+fun add(a, b) {
+	ret (a + b);
+}
+
+fun sub(a, b) {
+	ret (a - b);
+}
+
+typedef int AddType(int, int);
+
+fun calc(AddType add) {
+
+}
+
+var fooProto: FunPrototype = foo(a, b);
+
+fun calculate(fun mfun(x, y), a, b) {
+	ret mfun(a, b);
+}
+
+val res1 = calculate(add, 2, 3);
+val res2 = calculate(sub, 2, 3);
+
+
+
+

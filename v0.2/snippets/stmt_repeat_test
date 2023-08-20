@@ -1,0 +1,6 @@
+
+print "Repeat Stmt Test";
+print "";
+
+repeat(5)
+	print "Hello C!";

@@ -1,0 +1,90 @@
+
+var a = 10;
+
+print a;
+a = 89;
+
+if(a > 10) {
+	print "a > 10";
+}
+
+repeat(a) {
+	print a;
+}
+
+a = 0;
+
+loop(a -> 10) {
+	var a, b, c = 10;
+	print "hello, this loop statement!";
+}
+
+/*
+var primes = [ 2, 3, 5, 7, 11 ];
+
+var numbers = { 2, 4, 6, 8, 10 };
+
+() -> {
+
+}
+
+numbers.for_each(
+	fun(n) {
+		outln("n: " + n);
+	}
+);
+
+numbers.for_each {
+
+};
+
+var adder = (a, b, c) {
+	ret (a + b + c);
+};
+
+
+adder(1, 2, 3);
+
+
+
+numbers.for_each(n -> {
+	outln("n: " + n);
+});
+
+
+
+
+numbers.for_each { n ->
+	outln("n: " + n);
+}
+
+
+loop(numbers) { n ->
+	outln(n);
+}
+
+var	details = {
+	id: 10,
+	name: "anon",
+	age: 13
+};
+
+var details = {
+	id -> 10,
+	name -> "Prince",
+	age -> 55
+};
+
+details.id;
+
+details += { address -> "101, Black Street" };
+*/
+
+var i = idk;
+
+when(i) {
+	0 -> print "i was 0";
+	1 -> print "i was 1";
+	2, 3 -> print "i was either one of 2, 3";
+	else -> print "i was something else";
+}

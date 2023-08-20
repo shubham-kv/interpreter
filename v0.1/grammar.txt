@@ -1,0 +1,105 @@
+
+Grammar v1.1
+
+|==============================>
+| STATEMENTS :-
+|==============================>
+
+program			->  declaration* EOF ;
+
+declaration		->  var_decl 	|
+					val_decl	|
+					fun_decl	|
+					class_decl	|
+					stmt 		;
+
+var_decl		->  'var' var_init (',' var_init)*	;
+var_init		->  IDENTIFIER ('=' expr)?  		;
+
+val_decl		->  'val' val_init (',' val_init)*	;
+val_init		->  IDENTIFIER '=' expr				;
+
+fun_decl		->  'fun' IDENTIFIER '(' parameters? ')' '{' declaration* '}' ;
+parameters		->  IDENTIFIER (',' IDENTIFIER)* ;
+
+class_decl		->  'class' IDENTIFIER '{' (var_decl | val_decl) '}'  ;
+
+stmt 			->  expr_stmt 	|
+					if_stmt 	|
+					when_stmt	|
+					loop_stmt 	|
+					repeat_stmt |
+					block_stmt	|
+					ret_stmt	;
+
+expr_stmt 		->  expr ';' ;
+
+if_stmt			->	'if' '(' expr ')' stmt ('else' stmt)? ;
+
+when_stmt		->  'when' '(' expr ')' '{'
+						(expr (',' expr)* '->' stmt)+
+						('else' -> stmt)?
+					'}' ;
+
+loop_stmt 		->  loop_ranged | loop_conditional	;
+
+loop_ranged		->	'loop' '(' expr ('->' | '=>') expr (';' expr)? ')'
+						loop_body	;
+
+loop_conditional-> 	'loop' '(' expr ')' stmt	;
+
+loop_body		->	'{' (IDENTIFIER '->')? stmt* '}'	|
+					stmt	;
+
+repeat_stmt		->	'repeat' '(' term ')'
+						loop_body	;
+
+block_stmt		->	'{' declaration* '}' ;
+
+break_stmt      ->  'break' ';'		;
+continue_stmt   ->  'continue' ';'	;
+ret_stmt		->	'ret' expr? ';' ;
+
+
+
+|==============================>
+| EXPRESSIONS :-
+|==============================>
+
+expr			->  assignment |
+					logical_or ;
+
+assignment		->	molecule ('=' | '+=' | '-=' | '*=' | '/=' | '%=') expr  ;
+
+logical_or		->  logical_and ('||' logical_and )* ;
+
+logical_and		->  equality ('&&' equality )* ;
+
+equality		->  comparison (('==' | '!=') comparison)* ;
+
+comparison		->  term (('<' | '<=' | '>' | '>=') term)? ;
+
+term			->  factor (('+' | '-') factor)* ;
+
+factor			->  unary (('*' | '/' | '%') unary )* ;
+
+unary			->  ('++' | '--') IDENTIFIER	|
+					('!' | '-' | '+')? unary	|
+					molecule					;
+
+molecule		->  atom								|
+					atom ( '(' arguments? ')' )*		|	// call
+					atom ( '.' IDENTIFIER )*			|	// get_expr		-> parameter access
+					atom ( '[' expr ']' )*				;	// subscript	-> list element access
+
+arguments		->  expr ( ',' expr )* ;
+
+atom            ->  INTEGER						|
+					DOUBLE						|
+					STRING						|
+					'true'						|
+					'false'						|
+					IDENTIFIER					|
+					'(' expr ')'				|
+					'[' expr (',' expr)* ']' 	;
+

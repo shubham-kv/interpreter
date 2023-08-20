@@ -1,0 +1,12 @@
+
+class Bar {
+	barMethod() {
+		outln('Bar::barMethod()');
+	}
+}
+
+fun barFun() {
+	outln('barFun()');
+	ret 'barFun';
+}
+

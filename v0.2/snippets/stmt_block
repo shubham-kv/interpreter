@@ -1,0 +1,99 @@
+
+get "HashTable"
+
+
+
+{
+	print "In a block";
+	print "First block";
+
+	{
+		print "In another nested block";
+		print "Second nested block";
+	}
+}
+
+
+fun add(a, b) {
+	ret a + b;
+}
+
+// data class Student(id, name, age);
+
+Student {
+	id, name, age
+};
+
+var something = NULL
+var something = null
+var something = nil
+var something = undefined
+var something: lazy
+
+var number = vacant;
+var number = empty;
+var number = blank;
+
+empty var num;
+
+
+class Foo {
+	const SOME_CONST = 10;
+
+	private var a;
+	public var b;
+
+	- var a;
+	+ var b;
+
+	- provide_const() {
+		ret SOME_CONST;
+	}
+
+	+ printer() {
+		println(it.a);
+		println(provide_const());
+	}
+}
+
+
+
+
+var foo = Foo();
+
+class SymbolTable {
+	var entries;
+	var enclosing;
+
+	constr(enclosing) {
+		entries = HashTable<>();
+		enclosing = SymbolTable();
+	}
+
+	destr() {
+
+	}
+}
+
+
+
+
+val SIZE = 10;
+var length = 10;
+
+{
+	var i = 100;
+	
+	println(i);
+
+	{
+		var j = 20;
+		println(j);
+	}
+
+	println(i);
+	println(j);
+}
+
+
+

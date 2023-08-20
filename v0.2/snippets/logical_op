@@ -1,0 +1,29 @@
+
+print true;
+print false;
+
+print "";
+
+print !true;
+print !false;
+
+print "";
+
+// logical and
+print true && false;
+print false && false;
+
+print "";
+
+print false || true;
+print false || false;
+
+print "";
+
+print (10 > 9);
+print !(10 < 9);
+
+print !(20 == 20);
+print !(20 != 29);
+
+

@@ -1,0 +1,74 @@
+
+fun foo(){
+	ret [
+		[ 1, 2, 3 ],
+		[ 4, 5, 6 ],
+		[ 7, 8, 9 ]
+	];
+}
+
+
+loop(0 -> 3) { i ->
+	loop(0 -> 3) { j ->
+		outln('foo()[' + i + '][' + j + ']: ' + 'foo()[i][j]);
+	}
+}
+
+loop(i: 0 -> 3) {
+	loop(j: 0 -> 3) {
+
+		if(i == 2)
+			break;
+		
+		if(i == 1)
+			continue;
+
+		outln('foo()[' + i + '][' + j + ']: ' + foo()[i][j]);
+	}
+}
+
+loop(0 -> 3) { i :
+	loop(0 -> 3) { j :
+		outln('foo()[' + i + '][' + j + ']: ' + foo()[i][j]);
+	}
+}
+
+
+loop(age: 18 => 36) {
+	outln(age);
+}
+
+loop(evenNumber: 0 => 8; 2) {
+	outn(evenNumber);
+}
+
+repeat(i: 10) {
+	...
+}
+
+infinite {
+    ...
+}
+
+loop (0 -> 10) {
+    ...
+}
+
+
+var foo = [
+	[ 1, 2, 3 ],
+	[ 4, 5, 6 ],
+	[ 7, 8, 9 ]
+];
+
+var i, j;
+
+loop(0 -> 3) {
+	i = it;
+	loop(0 -> 3) {
+		j = it;
+
+		outln('foo[' + i + '][' + j + ']: ' + foo[i][j]);
+	}
+}
+

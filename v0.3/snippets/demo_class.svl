@@ -1,0 +1,22 @@
+
+class Point {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	moveTo(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	print() {
+		outln(' Point(' + this.x + ', ' + this.y + ')');
+	}
+}
+
+var point = Point(10, 10);
+point.print();
+point.moveTo(13, -13);
+point.print();
+

@@ -1,0 +1,129 @@
+
+
+fun fibonacci(n) {
+	var a = 0, b = 1, c = 0;
+
+	when(n) {
+		1 -> ret a;
+		2 -> ret b;
+		else -> {
+			repeat(n - 2) {
+				c = a + b;
+				a = b;
+				b = c;
+			}
+			ret c;
+		}
+	}
+}
+
+fun is_prime(n) {
+	if(n < 2)
+		ret false;
+
+	loop(2 => n / 2) {
+		if(n % it == 0) {
+			ret false;
+		}
+	}
+
+	ret true;
+}
+
+loop(0 => 255) {
+	// outln(fibonacci(it));
+	if(is_prime(it)) {
+		outln(it);
+	}
+}
+
+
+
+
+
+/*
+// loops from 0 to 127(inclusive)
+loop(0 => 127) {
+	// 'it' is an implicitly defined variable in loop's context
+	if(is_prime(it)) {
+		outln(it);
+	}
+}
+*/
+
+// fun test_fun1() {
+// 	outln("in block 0");
+
+// 	{
+// 		outln("in block 1a");
+// 		{
+// 			outln("in block 2a");
+// 			ret;
+// 		}
+// 		{
+// 			outln("in block 2b");
+// 		}
+// 	}
+	
+// 	outln("in block 1b");
+// }
+
+// test_fun1();
+
+
+// fun test_fun2() {
+// 	var i = 0;
+	
+// 	loop(true) {
+// 		if(i == 5) {
+// 			ret;
+// 		}
+
+// 		outln("test_fun loop: " + i);
+		
+// 		i += 1;
+// 	}
+// }
+
+// test_fun2();
+
+
+// fun test_fun3() {
+// 	loop(0 => 9) {
+// 		if(it == 5) {
+// 			ret;
+// 		}
+// 		outln("test_fun loop: " + it);
+// 	}
+// }
+
+// test_fun3();
+
+
+
+// fun test_fun4() {
+// 	repeat(10) {
+// 		if(it == 5) {
+// 			ret;
+// 		}
+// 		outln("test_fun repeat: " + it);
+// 	}
+// }
+
+// test_fun4();
+
+
+// fun test_fun5() {
+// 	repeat(10) {
+// 		if(it == 5) {
+// 			ret;
+// 		}
+// 		outln("test_fun repeat: " + it);
+// 	}
+// }
+
+// test_fun5();
+
+
+
+
